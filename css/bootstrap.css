@@ -4527,7 +4527,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 15px;
      -moz-border-radius: 15px;
           border-radius: 15px;
-}
+} 
 
 .navbar-static-top {
   position: static;
@@ -6208,4 +6208,11 @@ a.badge:focus {
 
 .affix {
   position: fixed;
+}
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }
