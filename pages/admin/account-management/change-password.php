@@ -2,7 +2,7 @@
      session_start();
      include('../../../db.php');
 
-     if($_SESSION['authority'] != 'nurse'){
+     if($_SESSION['authority'] != 'admin'){
         header("location: ../../../index.php");
 	exit();
      }
@@ -56,20 +56,8 @@
           <a class="brand" href="#"><!--<img src="../../images/home.png" />-->
             Padre Pio HMS</a>
           <div class="nav-collapse collapse">
-            <form class="navbar-form pull-left form-search">
-			 <select>
-			    <option>Search patient by...</option>
-                            <option name="fname">Firstname</option>
-                            <option name="fname">Lastname</option>
-                            <option name="fname">Last follow up</option>
-                        </select>
-               <div class="input-append">
-	       <input data-provide="typeahead" data-items="4"  type="text" class="span2 search-query">
-	       <button class="btn">Search</button>
-	       </div>
-            </form>
             <p class="navbar-text pull-right">
-               Logged in as <a href="#" class="navbar-link"><img src="../../../images/nurse.png" alt="Nurse" /><?php echo $_SESSION['username']; ?></a> &nbsp; | &nbsp;
+               Logged in as <a href="#" class="navbar-link"><img src="../../../images/admin.png" alt="Nurse" /><?php echo $_SESSION['username']; ?></a> &nbsp; | &nbsp;
                <a href="../../../logout.php" class="navbar-link">
                Logout<img src="../../../images/logout.png" alt="Logout?" />
               </a>
@@ -88,9 +76,7 @@
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
               <li><a href="../"><i class="icon-home icon-black"></i> Home</a></li>
-              <li><a href="../manage-inpatients.php"><i class="icon-pencil icon-black"></i> Manage Inpatients</a></li>
-              <li><a href="../manage-outpatients.php"><i class="icon-pencil icon-black"></i> Manage Outpatients</a></li>
-              <li><a href="../list-of-patients.php"><i class="icon-list-alt icon-black"></i> List of Patients</a></li>
+              <li><a href="../manage-users.php"><i class="icon-user icon-black"></i> Manage Users</a></li>
               <li class="nav-header">User Account Panel</li>
               <li><a href="index.php"><i class="icon-pencil icon-black"></i> Manage Account</a></li>
               <li class="active"><a href="#"><i class="icon-lock icon-black"></i> Change Password</a></li>

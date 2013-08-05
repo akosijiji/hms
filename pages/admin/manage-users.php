@@ -5,19 +5,20 @@
         header("location: ../../index.php");
 	exit();
      }
+     
     include('include/header.php');
     include('include/footer.php');
 
 ?>
-  
+
 <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-              <li class="active"><a href="#"><i class="icon-home icon-black"></i> Home</a></li>
-              <li><a href="manage-users.php"><i class="icon-user icon-black"></i> Manage Users</a></li>
+              <li><a href="index.php"><i class="icon-home icon-black"></i> Home</a></li>
+              <li class="active"><a href="#"><i class="icon-user icon-black"></i> Manage Users</a></li>
               <li class="nav-header">User Account Panel</li>
               <li><a href="account-management/"><i class="icon-pencil icon-black"></i> Manage Account</a></li>
               <li><a href="account-management/change-password.php"><i class="icon-lock icon-black"></i> Change Password</a></li>

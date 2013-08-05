@@ -56,17 +56,17 @@
           <a class="brand" href="#"><!--<img src="../../images/home.png" />-->
             Padre Pio HMS</a>
           <div class="nav-collapse collapse">
-            <form class="navbar-form pull-left">
+            <form class="navbar-form pull-left form-search">
 			 <select>
 			    <option>Search patient by...</option>
                             <option name="fname">Firstname</option>
                             <option name="fname">Lastname</option>
                             <option name="fname">Last follow up</option>
                         </select>
-               <input class="span2" type="text" placeholder="Search">
-                <div class="btn-group">
-                    <button class="btn">Go</button>
-                </div>
+               <div class="input-append">
+	       <input data-provide="typeahead" data-items="4"  type="text" class="span2 search-query">
+	       <button class="btn">Search</button>
+	       </div>
             </form>
             <p class="navbar-text pull-right">
                Logged in as <a href="#" class="navbar-link"><img src="../../../images/nurse.png" alt="Nurse" /><?php echo $_SESSION['username']; ?></a> &nbsp; | &nbsp;
@@ -87,17 +87,16 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-              <li><a href="../">Home</a></li>
-              <li><a href="../patient-registration.php">Patient Registration</a></li>
-              <li><a href="../manage-inpatients.php">Manage Inpatients</a></li>
-              <li><a href="../manage-outpatients.php">Manage Outpatients</a></li>
-              <li><a href="../list-of-patients.php">List of Patients</a></li>
+              <li><a href="../"><i class="icon-home icon-black"></i> Home</a></li>
+              <li><a href="../manage-inpatients.php"><i class="icon-pencil icon-black"></i> Manage Inpatients</a></li>
+              <li><a href="../manage-outpatients.php"><i class="icon-pencil icon-black"></i> Manage Outpatients</a></li>
+              <li><a href="../list-of-patients.php"><i class="icon-list-alt icon-black"></i> List of Patients</a></li>
               <li class="nav-header">User Account Panel</li>
-              <li class="active"><a href="#">Manage Account</a></li>
-              <li><a href="change-password.php">Change Password</a></li>
-              <li><a href="../../../logout.php">Logout</a></li>
+              <li class="active"><a href="#"><i class="icon-pencil icon-black"></i> Manage Account</a></li>
+              <li><a href="change-password.php"><i class="icon-lock icon-black"></i> Change Password</a></li>
+              <li><a href="../../../logout.php"><i class="icon-off icon-black"></i> Logout</a></li>
               <li class="nav-header">About the Software</li>
-              <li><a href="../../../about.php">HMS &copy; 2013</a></li>
+              <li><a href="../../../about.php"><i class="icon-info-sign icon-black"></i> HMS &copy; 2013</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

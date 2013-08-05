@@ -74,24 +74,23 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-              <li><a href="#">Manage Inatients</a></li>
-              <li><a href="#">Manage Outpatients</a></li>
-              <li><a href="#">Link</a></li>
+              <li class="active"><a href="#"><i class="icon-home icon-black"></i> Home</a></li>
+              <li><a href="list-of-medicine.php"><i class="icon-eye-open icon-black"></i> Medicine</a></li>
+              <li><a href="#">Drug</a></li>
               <li><a href="#">Link</a></li>
               <li class="nav-header">User Account Panel</li>
               <li><a href="#">Change Password</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li class="nav-header">About the Software</li>
-              <li><a href="#">Link</a></li>
+              <li><a href="#"><i class="icon-info-sign icon-black"></i> HMS &copy; 2013</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1><img src="../../images/home.png" />Hospital Management System</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            <h1><img src="../../images/home.png" />Pharmacy Management</h1>
+            
           </div>
 
 

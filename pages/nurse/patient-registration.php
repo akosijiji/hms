@@ -43,7 +43,7 @@
     
     <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
      
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/registration-style.css" rel="stylesheet">
      
     <script src="../../js/jquery.js"></script>
     <script src="../../js/script-validation.js"></script>
@@ -69,19 +69,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#"><!--<img src="../../images/home.png" />-->
+          <a class="brand" href="#">
             Padre Pio HMS</a>
           <div class="nav-collapse collapse">
             <form class="navbar-form pull-left">
-		        <select>
+                        <select>
 			    <option>Search patient by...</option>
                             <option name="fname">Firstname</option>
                             <option name="fname">Lastname</option>
                             <option name="fname">Last follow up</option>
                         </select>
-               <input class="span2" type="text" placeholder="Search">
+                <input class="input-medium search-query" type="text" placeholder="Search">
                 <div class="btn-group">
-                    <button class="btn">Go</button>
+                    <button class="btn btn-primary" >Go</button>
                 </div>
             </form>
             <p class="navbar-text pull-right">
@@ -89,13 +89,11 @@
                <a href="../../logout.php" class="navbar-link">
                Logout<img src="../../images/logout.png" alt="Logout?" />
               </a>
-            </p>
-            
-            
+	    </p>
           </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+        </div><!--/.container-fluid -->
+      </div><!--/.nav-inner -->
+    </div><!--/.nav-bar fixed top -->
     
     <div class="container-fluid">
       <div class="row-fluid">
@@ -103,28 +101,28 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-	      <li><a href="index.php">Home</a></li>
-              <li class="active"><a href="#">Patient Registration</a></li>
-              <li><a href="manage-inpatients.php">Manage Inpatients</a></li>
-              <li><a href="manage-outpatients.php">Manage Outpatients</a></li>
-              <li><a href="list-of-patients.php">List of Patients</a></li>
+              <li><a href="index.php"><i class="icon-home icon-black"></i> Home</a></li>
+              <li class="active"><a href="#"><i class="icon-user icon-black"></i> Patient Registration</a></li>
+              <li><a href="manage-inpatients.php"><i class="icon-pencil icon-black"></i> Manage Inpatients</a></li>
+              <li><a href="manage-outpatients.php"><i class="icon-pencil icon-black"></i> Manage Outpatients</a></li>
+              <li><a href="list-of-patients.php"><i class="icon-list-alt icon-black"></i> List of Patients</a></li>
               <li class="nav-header">User Account Panel</li>
-              <li><a href="account-management/">Manage Account</a></li>
-              <li><a href="account-management/change-password.php">Change Password</a></li>
-              <li><a href="../../logout.php">Logout</a></li>
+              <li><a href="account-management/"><i class="icon-pencil icon-black"></i> Manage Account</a></li>
+              <li><a href="account-management/change-password.php"><i class="icon-lock icon-black"></i> Change Password</a></li>
+              <li><a href="../../logout.php"><i class="icon-off icon-black"></i> Logout</a></li>
               <li class="nav-header">About the Software</li>
-              <li><a href="../../about.php">HMS &copy; 2013</a></li>
+              <li><a href="../../about.php"><i class="icon-exclamation-sign icon-black"></i> HMS &copy; 2013</a></li>
             </ul>
           </div><!--/.well -->
-        </div><!--/span-->
-        
+        </div><!--/span3-->
+	
         <div class="span9">
           <div class="hero-unit">
             <h1><img src="../../images/patient-registration.png" />Patient Registration Module</h1>
           </div>
-          
-        <div class="row-fluid">
-            <form action="#" method="POST" id="patient-form" class="form-horizontal">
+	  
+	  <div class="row-fluid">
+            <form action="addpatient.php" method="POST" id="patient-form" class="form-horizontal">
                 <div class="control-group">
                     <label class="control-label" for="patient_fname">Firstname</label>
                     <div class="controls">
@@ -146,7 +144,7 @@
                 <div class="control-group">
                     <label class="control-label" for="patient_gender">Gender</label>
                     <div class="controls">
-                        <select id="mySel">
+                        <select id="mySel" name="patient_gender">
                             <option name="male">Male</option>
                             <option name="female">Female</option>                    
                         </select>
@@ -161,7 +159,7 @@
                 <div class="control-group">
                     <label class="control-label" for="patient_religion">Religion</label>
                     <div class="controls">
-                        <select id="mySel">
+                        <select id="mySel" name="patient_religion">
                             <option>Christian - Born Again</option>
                             <option>Christian - Protestant</option>
                             <option>Christian - Roman Catholic</option>
@@ -192,19 +190,26 @@
                 <div class="control-group">
                     <label class="control-label" for="patient_type">Patient Type</label>
                     <div class="controls">
-                        <select id="mySel">
+                        <select id="mySel" name="patient_type">
                             <option>Inpatient</option>
                             <option>Outpatient</option>                    
                         </select>
                     </div>
                 </div>
 		<div class="control-group">
-                    <label class="control-label" for="input10">Birthday</label>
+                    <label class="control-label" for="patient_bday">Birthday</label>
 		    <div class="controls">
 			 <div class="input-append date" id="dp3" data-date="<?php echo date("d-m-Y"); ?>" data-date-format="dd-mm-yyyy">
-			      <input class="span12" size="16" type="text" value="<?php echo date("d-m-Y"); ?>">
+			      <input class="input-small" type="text" name="patient_bday" value="<?php echo date("d-m-Y"); ?>">
 			      <span class="add-on"><i class="icon-calendar"></i></span>
 			 </div>
+		    </div>
+                </div>
+		
+		<div class="control-group">
+                    <label class="control-label" for="patient_remarks">Remark/s</label>
+		    <div class="controls">
+			      <textarea class="input-xxlarge" rows="10" type="text" name="patient_remarks"></textarea>
 		    </div>
                 </div>
                 
@@ -213,26 +218,16 @@
                     <button type="reset" class="btn btn-primary">Cancel</button>
                 </div>  
             </form> <!-- end of form -->
-        </div> <!-- row-fluid -->
-
-        </div><!--/span-->
-      </div><!--/row-->
+	</div> <!-- end of row fluid 2 -->
+	  </div><!--/span9-->
+      </div><!--/row fluid 1-->
+      
       <hr>
       <footer>
         <p>&copy; All Rights Reserved 2013</p>
       </footer>
 
     </div><!--/.fluid-container-->
-    
-		    
-    <!--
-    <script>
-    $.getScript('http://ivaynberg.github.io/select2/select2-2.1/select2.js',function(){
-    $("#mySel").select2({
-        allowClear:true
-        });
-    });
-    </script> -->
 
     
     <!-- Placed at the end of the document so the pages load faster -->

@@ -7,79 +7,11 @@
 	exit();
      }
 
+    include('include/header.php');
+    include('include/footer.php'); 
+     
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-        
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <link href="../../css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-
-      @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-          float: none;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    </style>
-    <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
-        
-    </head>
-<body>
-    
-    
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#"><!--<img src="../../images/home.png" />-->
-            Padre Pio HMS</a>
-          <div class="nav-collapse collapse">
-            <form class="navbar-form pull-left">
-                        <select>
-			    <option>Search patient by...</option>
-                            <option name="fname">Firstname</option>
-                            <option name="fname">Lastname</option>
-                            <option name="fname">Last follow up</option>
-                        </select>
-               <input class="span2" type="text" placeholder="Search">
-                <div class="btn-group">
-                    <button class="btn">Go</button>
-                </div>
-            </form>
-            <p class="navbar-text pull-right">
-               Logged in as <a href="#" class="navbar-link"><img src="../../images/nurse.png" alt="Nurse" /><?php echo $_SESSION['username']; ?></a> &nbsp; | &nbsp;
-               <a href="../../logout.php" class="navbar-link">
-               Logout<img src="../../images/logout.png" alt="Logout?" />
-              </a>
-            </p>
-            
-            
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
     
     <div class="container-fluid">
       <div class="row-fluid">
@@ -87,17 +19,16 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Navigation</li>
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="patient-registration.php">Patient Registration</a></li>
-              <li><a href="manage-inpatients.php">Manage Inpatients</a></li>
-              <li><a href="manage-outpatients.php">Manage Outpatients</a></li>
-              <li><a href="list-of-patients.php">List of Patients</a></li>
+              <li class="active"><a href="#"><i class="icon-home icon-black"></i> Home</a></li>
+              <li><a href="manage-inpatients.php"><i class="icon-pencil icon-black"></i> Manage Inpatients</a></li>
+              <li><a href="manage-outpatients.php"><i class="icon-pencil icon-black"></i> Manage Outpatients</a></li>
+              <li><a href="list-of-patients.php"><i class="icon-list-alt icon-black"></i> List of Patients</a></li>
               <li class="nav-header">User Account Panel</li>
-              <li><a href="account-management/">Manage Account</a></li>
-              <li><a href="account-management/change-password.php">Change Password</a></li>
-              <li><a href="../../logout.php">Logout</a></li>
+              <li><a href="account-management/"><i class="icon-pencil icon-black"></i> Manage Account</a></li>
+              <li><a href="account-management/change-password.php"><i class="icon-lock icon-black"></i> Change Password</a></li>
+              <li><a href="../../logout.php"><i class="icon-off icon-black"></i> Logout</a></li>
               <li class="nav-header">About the Software</li>
-              <li><a href="../../about.php">HMS &copy; 2013</a></li>
+              <li><a href="../../about.php"><i class="icon-info-sign icon-black"></i> HMS &copy; 2013</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -136,7 +67,3 @@
     <script src="../../js/bootstrap-collapse.js"></script>
     <script src="../../js/bootstrap-carousel.js"></script>
     <script src="../../js/bootstrap-typeahead.js"></script>
-    
-
-</body>
-</html>
